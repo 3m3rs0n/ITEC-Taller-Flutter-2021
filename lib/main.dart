@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
@@ -18,11 +19,12 @@ class MyApp extends StatelessWidget {
         body: Center(
           child: CupertinoButton(
               color: Colors.blue[900],
-              child: const Text("Soy un cupertino button",
+              child: Text("Soy un cupertino button",
                   style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.w300,
                     fontSize: 20,
+                    fontFamily: GoogleFonts.inconsolata().fontFamily
                   )),
               //Algunas propiedades requieren como parametro a una funcion
               //y esa funcion en algunos casos sera una funcion anonima
@@ -32,6 +34,21 @@ class MyApp extends StatelessWidget {
               }),
         ),
       ),
+    );
+  }
+}
+
+
+class SegundoWidget extends StatefulWidget {
+  @override
+  _SegundoWidgetState createState() => _SegundoWidgetState();
+}
+
+class _SegundoWidgetState extends State<SegundoWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      
     );
   }
 }
